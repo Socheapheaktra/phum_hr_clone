@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CustomToggleButton extends StatefulWidget {
-  CustomToggleButton({
+  const CustomToggleButton({
     Key? key,
     required this.children,
   }) : super(key: key);
 
-  List<String> children = List.filled(2, [], growable: false);
+  final List<String> children;
 
   @override
   State<CustomToggleButton> createState() => _CustomToggleButtonState();
 }
 
 class _CustomToggleButtonState extends State<CustomToggleButton> {
-  late int _selectedIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +30,7 @@ class _CustomToggleButtonState extends State<CustomToggleButton> {
               horizontal: 15,
             ),
             decoration: BoxDecoration(
-              color: widget.children. ? Colors.blue.shade800 : Colors.grey.shade200,
+              color: Colors.blue.shade800,
               borderRadius: BorderRadius.circular(10),
             ),
             height: 35,
@@ -42,10 +40,10 @@ class _CustomToggleButtonState extends State<CustomToggleButton> {
                 style: Theme.of(context)
                     .textTheme
                     .labelMedium!
-                    .copyWith(color: isActive ? Colors.white : Colors.black),
+                    .copyWith(color: Colors.white),
               ),
             ),
-          ),
+          );
         }).toList(),
       ),
     );

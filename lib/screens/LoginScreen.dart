@@ -73,10 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 50),
                 const Center(
                   child: CustomToggleButton(
-                    children: [
-                      CustomToggleButtonItem(title: "English"),
-                      CustomToggleButtonItem(title: "ភាសាខ្មែរ")
-                    ],
+                    children: ['English', 'ភាសាខ្មែរ'],
                   ),
                 )
               ],
